@@ -9,7 +9,7 @@ use Drupal\Core\Session\AccountInterface;
  * Puts a webform submission on a waitlist.
  *
  * @Action(
- *   id = "system.action.webform_submission.make_waitlisted_action",
+ *   id = "webform_submission.webform_submission_make_waitlisted_action",
  *   label = @Translation("Put submission on waitlist"),
  *   type = "webform_submission"
  * )

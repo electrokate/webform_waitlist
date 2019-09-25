@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - webform
-id: webform_submission_make_unwaitlisted_action
+id: webform_submission.webform_submission_make_unwaitlisted_action
 label: 'Take submission off of waitlist'
 type: webform_submission
-plugin: webform_submission_make_unwaitlisted_action
+plugin: webform_submission.webform_submission_make_unwaitlisted_action
 configuration: {  }

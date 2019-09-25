@@ -9,7 +9,7 @@ use Drupal\Core\Session\AccountInterface;
  * Takes a submission off of waitlist.
  *
  * @Action(
- *   id = "system.action.webform_submission.make_unwaitlisted_action",
+ *   id = "webform_submission.webform_submission_make_unwaitlisted_action",
  *   label = @Translation("Take submission off waitlist"),
  *   type = "webform_submission"
  * )

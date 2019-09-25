@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - webform
-id: webform_submission_make_waitlisted_action
+id: webform_submission.webform_submission_make_waitlisted_action
 label: 'Put submission on waitlist'
 type: webform_submission
-plugin: webform_submission_make_waitlisted_action
+plugin: webform_submission.webform_submission_make_waitlisted_action
 configuration: {  }

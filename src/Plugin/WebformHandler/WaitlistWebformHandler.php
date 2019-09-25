@@ -162,7 +162,7 @@ class WaitlistWebformHandler extends WebformHandlerBase {
    * {@inheritdoc}
    */
   public function alterForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
-
+    
     $waitlist_notice = $this->configuration['waitlist_notice'];
     $waitlist_notice = $this->replaceTokens($waitlist_notice, $this->getWebformSubmission());
     $form['elements']['waitlist_message']['#access'] = FALSE;

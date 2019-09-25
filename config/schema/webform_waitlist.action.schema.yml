@@ -1,6 +1,6 @@
-action.configuration.webform_submission_make_waitlisted_action:
+action.configuration.webform_submission.webform_submission_make_waitlisted_action:
   type: action_configuration_default
   label: 'Put submission on waitlist'
-action.configuration.webform_submission_make_unwaitlisted_action:
+action.configuration.webform_submission.webform_submission_make_unwaitlisted_action:
   type: action_configuration_default
   label: 'Take submission off of waitlist'
