@@ -1,0 +1,8 @@
+name: 'Webform Waitlist'
+description: 'A Webform extension to implement a waiting list.'
+core: '8.x'
+package: 'Webform'
+type: module
+dependencies:
+  - webform:webform
+  - drupal:views

@@ -1,0 +1,13 @@
+webform.handler.waitlist:
+  type: mapping
+  label: Webform waitlist
+  mapping:
+    waitlist:
+      label: 'Enable Waitlist'
+      type: boolean
+    waitlist_threshold:
+      label: 'Number of waitlisted submissions'
+      type: integer
+    waitlist_notice:
+      type: text
+      label: 'Wait List notification message'

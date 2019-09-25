@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Installation hooks for Webform Waitlist module.
+ */
+
+use Drupal\Core\Field\BaseFieldDefinition;
+
+/**
+ * Add waitlist field to webform_submission entity.
+ */
+function webform_waitlist_install() {
+
+  $field_storage_definition = BaseFieldDefinition::create('boolean')
+    ->setLabel(t('Waitlist'))
+    ->setDescription(t('Is Submission on a waitlist'))
+    ->setDefaultValue(FALSE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('is_waitlist', 'webform_submission', 'webform_submission', $field_storage_definition);
+
+}

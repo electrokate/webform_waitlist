@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Adds a handler that provides waitlist functionality to a webform.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+
+/**
+ * Implements hook_help().
+ */
+function webform_waitlist_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webform_waitlist module.
+    case 'help.page.webform_waitlist':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides an waitlist for webforms.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function webform_waitlist_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+  if (!is_null($entity_type)) {
+    if ($entity_type->id() === 'webform_submission') {
+      $fields['is_waitlist'] = BaseFieldDefinition::create('boolean')
+        ->setLabel(t('Waitlist'))
+        ->setDescription(t('The waitlist status of this webform submission.'))
+        ->setDefaultValue(FALSE);
+    }
+  }
+  return $fields;
+}
